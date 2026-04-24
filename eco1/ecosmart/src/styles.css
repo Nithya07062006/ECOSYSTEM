@@ -1,0 +1,59 @@
+@import "leaflet/dist/leaflet.css";
+
+/* GLOBAL BODY */
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:linear-gradient(135deg,#d4fc79,#96e6a1);
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,100,0,0.8);
+backdrop-filter:blur(10px);
+color:white;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* NAV LINKS */
+.links a{
+margin:0 10px;
+color:#d4efdf;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.links a:hover{
+color:white;
+transform:scale(1.1);
+}
+
+/* CONTENT */
+.content{
+padding:20px;
+}
+
+/* 🍃 LEAF ANIMATION */
+body::after{
+content:"🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃 🍃  ";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+animation:leaf 10s linear infinite;
+opacity:0.2;
+pointer-events:none;
+}
+
+@keyframes leaf{
+0%{transform:translateY(-100px);}
+100%{transform:translateY(100vh);}
+}

@@ -1,0 +1,48 @@
+<div class="card shadow p-4">
+
+<h3 class="mb-3">🌿 Carbon Footprint Calculator</h3>
+
+<div class="mb-3">
+<label>Electricity Usage</label>
+<select class="form-select" [(ngModel)]="electricity">
+  <option [value]="0.5">Low</option>
+  <option [value]="1">Medium</option>
+  <option [value]="2">High</option>
+</select>
+</div>
+
+<div class="mb-3">
+<label>Transport Mode</label>
+<select class="form-select" [(ngModel)]="transport">
+  <option [value]="0.1">Walking</option>
+  <option [value]="0.5">Public Transport</option>
+  <option [value]="1">Car</option>
+</select>
+</div>
+
+<div class="mb-3">
+<label>Food Habit</label>
+<select class="form-select" [(ngModel)]="food">
+  <option [value]="0.2">Vegetarian</option>
+  <option [value]="0.5">Mixed</option>
+  <option [value]="1">Non-Veg</option>
+</select>
+</div>
+
+<button class="btn btn-success w-100" (click)="calculateCarbon()">
+Calculate Carbon
+</button>
+
+<div *ngIf="carbon" class="mt-4">
+
+<h4>{{carbon}} kg CO₂</h4>
+<h5 [style.color]="color">{{carbonLevel}}</h5>
+
+<div class="alert alert-success mt-3">
+<strong>Eco Recommendation:</strong>
+<p>{{recommendation}}</p>
+</div>
+
+</div>
+
+</div>

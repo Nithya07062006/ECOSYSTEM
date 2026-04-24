@@ -1,0 +1,33 @@
+<div class="dashboard-container">
+
+  <h2>📊 Environmental Dashboard</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Total Carbon</h3>
+      <p>{{totalCarbon}} kg CO₂</p>
+    </div>
+
+    <div class="card">
+      <h3>Eco Score</h3>
+      <p>🌱</p>
+    </div>
+
+    <div class="card">
+      <h3>Air Quality</h3>
+      <p>Moderate</p>
+    </div>
+
+    <div class="card">
+      <h3>Carbon Category</h3>
+      <h2 [style.color]="color">{{carbonLevel}}</h2>
+    </div>
+
+  </div>
+
+  <div class="chart-box">
+    <canvas id="carbonChart"></canvas>
+  </div>
+
+</div>

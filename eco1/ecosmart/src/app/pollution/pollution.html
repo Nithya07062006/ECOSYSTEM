@@ -1,0 +1,15 @@
+<div class="pollution-container">
+
+  <h2>🌫️ Air Pollution Data</h2>
+
+  <input type="number" [(ngModel)]="lat" placeholder="Latitude">
+  <input type="number" [(ngModel)]="lon" placeholder="Longitude">
+
+  <!-- ✅ FUNCTION NAME MUST MATCH -->
+  <button (click)="getAirQuality()">Check Air Quality</button>
+
+  <div *ngIf="aqi">
+    <h3>AQI: {{aqi}}</h3>
+  </div>
+
+</div>

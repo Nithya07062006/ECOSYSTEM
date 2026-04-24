@@ -1,0 +1,12 @@
+.map-container{
+text-align:center;
+padding:20px;
+}
+
+#map{
+height:500px;
+width:90%;
+margin:auto;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
